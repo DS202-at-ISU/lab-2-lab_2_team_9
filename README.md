@@ -160,3 +160,21 @@ linear relationship disregarding the extreme outliers. This variable
 helps to show that the data for one of the houses is likely inaccurate,
 as it has was apparently built in the year 0 and also sold for a price
 of \$0.
+
+Naveen’s work:
+
+The variable I picked that could be influence the main variable (Sales
+Price) is bedrooms. The more rooms there are the higher the price
+
+``` r
+ggplot(ames, aes(x = `Bedrooms`, y = log10(`Sale Price`))) +
+  geom_boxplot() + coord_flip() 
+```
+
+![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+
+Most of the houses based off the box-plot suggest a 5 bedroom layout,
+with prices ranging from low as 0 and high as 7 on the log scale of the
+house prices. Most of the houses were bought in the logscale 5 range
+with bedrooms ranging were 1 to 10. This suggests the number of bedrooms
+doesn’t largely impact the Sale price.
