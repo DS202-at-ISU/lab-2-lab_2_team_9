@@ -121,13 +121,11 @@ dates, numerical, and characters, with each variable describing a
 different aspect of an individual house. The expected data range can be
 found in the summary table for each variable.
 
-**Step 2 Result:** As a team, we found that
-
-Sale price is off special interest because it’s the main factor people
-look at when buying a house. Other factors that could influences are
-LotArea, Bedrooms, Year the house was built. These are some factors that
-are also special since they could influence the most important variable
-which is Sale Price.
+**Step 2 Result:** As a team, we found that Sale Price is of special
+interest because it’s the main factor people look at when buying a
+house. Other factors that could influences are LotArea, Bedrooms, Year
+the house was built. These are some factors that are also special since
+they could influence the most important variable which is Sale Price.
 
 **Step 3 Result:**
 
@@ -135,8 +133,10 @@ which is Sale Price.
 ggplot(ames, aes(x = `Sale Price`)) + geom_histogram(binwidth = 2000000, fill = "blue") + labs(title = "Histogram of Sales Price",  x = "Price",y = "Count") 
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
-
-As a team. we found that
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- --> As a team, we
+found that the main variable is Sale Price. The range of sale price is
+\$20,500,000 (Min = 0, Max = 20,500,000). According to our histogram, it
+would appear that a majority of houses were sold for under \$2,000,000.
+There appear to be some outliers priced at above \$10,000,000.
 
 **Step 4 Result:**
