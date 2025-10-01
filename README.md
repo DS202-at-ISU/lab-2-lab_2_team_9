@@ -137,6 +137,12 @@ found in the summary table for each variable.
 
 **Step 2 Result:** As a team, we found that
 
+Sale price is off special interest because it’s the main factor people
+look at when buying a house. Other factors that could influences are
+LotArea, Bedrooms, Year the house was built. These are some factors that
+are also special since they could influence the most important variable
+which is Sale Price.
+
 **Step 3 Result:** As a team. we found that
 
 **Step 4 Result:**
