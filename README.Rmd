@@ -23,7 +23,7 @@ library(classdata)
 ```
 
 
-*Step 1 Result:*
+**Step 1 Result:**
 ```{r}
 #Look at the first couple rows of dataset
 head(ames)
@@ -34,13 +34,17 @@ head(ames)
 #Look at the structure
 str(ames)
 ```
+```{r}
+# Summary function to find range (mins and maxes) of each variabel
+summary(ames)
+```
 
+As a team, we found that there are 16b variables total, which include Parcel ID, Address, Style, Occupancy, Sale Date, Sale Price, Multi Sale, YearBuilt, Acres, TotalLivingArea, Bedrooms, FinishedBsmtArea, LotArea, AC, FirePlace, and Neighborhood. The types of variables include factors, dates, numerical, and characters, with each variable describing a different aspect of an individual house. The expected data range can be found in the summary table for each variable. 
+
+**Step 2 Result:**
 As a team, we found that
 
-*Step 2 Result:*
-As a team, we found that
-
-*Step 3 Result:*
+**Step 3 Result:**
 As a team. we found that
 
-*Step 4 Result:*
+**Step 4 Result:**
