@@ -17,6 +17,10 @@ Include your answers in this document (Rmd file). Make sure that it knits proper
 
 All submissions to the github repo will be automatically uploaded for grading once the due date is passed.
 Submit a link to your repository on Canvas (only one submission per team) to signal to the instructors that you are done with your submission.
+
+**TL:DR**  
+Our team investigated structure of the ames dataset, with a focus on the main variable `Sale Price`. We created a histogram to show the distribution of price and found that a majority of houses were under $2,000,000 with a few outliers at much higher prices. Along with this, we looked into the relationship that the number of bedrooms and the year the house was built have on `Sale Price`.
+
 ```{r}
 #Dependencies
 library(classdata)
