@@ -52,6 +52,6 @@ Sale price is off special interest because it's the main factor people look at w
 ggplot(ames, aes(x = `Sale Price`)) + geom_histogram(binwidth = 2000000, fill = "blue") + ggtitle("Histogram of Sales Price")
 ```
 
-As a team. we found that
+As a team, we found that the main variable is Sale Price. The range of sale price is $20,500,000 (Min = 0, Max = 20,500,000). According to our histogram, it would appear that a majority of houses were sold for under $2,000,000. There appear to be some outliers priced at above $10,000,000.
 
 **Step 4 Result:**

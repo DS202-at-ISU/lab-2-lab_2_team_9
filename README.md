@@ -137,6 +137,10 @@ ggplot(ames, aes(x = `Sale Price`)) + geom_histogram(binwidth = 2000000, fill = 
 
 ![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
-As a team. we found that
+As a team, we found that the main variable is Sale Price. The range of
+sale price is \$20,500,000 (Min = 0, Max = 20,500,000). According to our
+histogram, it would appear that a majority of houses were sold for under
+\$2,000,000. There appear to be some outliers priced at above
+\$10,000,000.
 
 **Step 4 Result:**
