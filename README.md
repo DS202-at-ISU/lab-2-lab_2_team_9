@@ -113,7 +113,7 @@ summary(ames)
     ##                     (19) Res: North Ridge Hei: 420  
     ##                     (Other)                  :3622
 
-As a team, we found that there are 16b variables total, which include
+As a team, we found that there are 16 variables total, which include
 Parcel ID, Address, Style, Occupancy, Sale Date, Sale Price, Multi Sale,
 YearBuilt, Acres, TotalLivingArea, Bedrooms, FinishedBsmtArea, LotArea,
 AC, FirePlace, and Neighborhood. The types of variables include factors,
@@ -140,3 +140,21 @@ would appear that a majority of houses were sold for under \$2,000,000.
 There appear to be some outliers priced at above \$10,000,000.
 
 **Step 4 Result:**
+
+``` r
+# Scatterplot of `Sale Price` and `YearBuilt`
+ggplot(ames, aes(x = YearBuilt, y = `Sale Price`)) +
+  geom_point()
+```
+
+    ## Warning: Removed 447 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- --> Nate’s work:
+I chose to investigate the relationship between the `Sale Price` and
+`YearBuilt` variables. According to my scatterplot, the overall trend is
+that `Sale Price` increases as `YearBuilt` increases, with a relatively
+linear relationship disregarding the extreme outliers. This variable
+helps to show that the data for one of the houses is likely inaccurate,
+as it has was apparently built in the year 0 and also sold for a price
+of \$0.
