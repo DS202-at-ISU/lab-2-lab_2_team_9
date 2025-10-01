@@ -25,7 +25,14 @@ library(classdata)
 
 *Step 1 Result:*
 ```{r}
+#Look at the first couple rows of dataset
 head(ames)
+```
+
+
+```{r}
+#Look at the structure
+str(ames)
 ```
 
 As a team, we found that
