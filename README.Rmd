@@ -75,4 +75,35 @@ ggplot(ames, aes(x = `Bedrooms`, y = log10(`Sale Price`))) +
   geom_boxplot() + coord_flip() 
 ```
 
+Som's work:
+I investigated **TotalLivingArea (sf)** as a driver of `Sale Price`. After trimming the top 1% of both variables and removing zero/NA prices, the scatter shows a clear upward trend: bigger homes generally sell for more, with a few off-trend points likely due to neighborhood/condition.
+
+```{r warning=FALSE, message=FALSE}
+use_dplyr <- requireNamespace("dplyr", quietly = TRUE)
+
+if (use_dplyr) {
+  library(dplyr)
+  df <- ames %>%
+    rename(TotalLivingArea = `TotalLivingArea (sf)`) %>%
+    filter(!is.na(`Sale Price`), `Sale Price` > 0, !is.na(TotalLivingArea))
+} else {
+  df <- ames
+  names(df)[names(df) == "TotalLivingArea (sf)"] <- "TotalLivingArea"
+  df <- df[!is.na(df$`Sale Price`) & df$`Sale Price` > 0 & !is.na(df$TotalLivingArea), ]
+}
+
+q_price <- quantile(df$`Sale Price`, 0.99, na.rm = TRUE)
+q_area  <- quantile(df$TotalLivingArea, 0.99, na.rm = TRUE)
+df_trim <- df[df$`Sale Price` < q_price & df$TotalLivingArea < q_area, ]
+
+ggplot(df_trim, aes(x = TotalLivingArea, y = `Sale Price`)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(se = FALSE, method = "loess") +
+  labs(
+    title = "Sale Price vs Total Living Area (trimmed 1% tails)",
+    x = "Total Living Area (sq ft)",
+    y = "Sale Price"
+  )
+```
+
 Most of the houses based off the box-plot suggest a 5 bedroom layout, with prices ranging from low as 0 and high as 7 on the log scale of the house prices. Most of the houses were bought in the logscale 5 range with bedrooms ranging were 1 to 10. This suggests the number of bedrooms doesn't largely impact the Sale price.
